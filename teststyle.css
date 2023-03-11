@@ -1,0 +1,101 @@
+h1 {
+    color:black;
+    font-size:250px;
+    text-align:center;
+}
+html{
+    color:rgb(255,80,50);
+    background: url("picture.jpg")fixed;
+}
+body{
+
+}
+article{
+    /*background-color: rgba(255,255,0,0.5);*/
+    border:20px royalblue;
+}
+div.game{
+    background-color:rgb(255,255,0);
+    float:left;
+}
+div.content{
+    /*width:1000px;*/
+    margin:0 auto;
+    background-color: white;
+}
+div.aside{
+    margin: 0 0 0 10px;
+    box-shadow:4px 4px 5px #aaa;
+    float: left;
+    width: 800px;
+    border:5px black solid;
+    border-radius: 5px;
+    /*background-color: black;*/
+}
+p.song{
+    border-radius: 20px 20px;
+    text-shadow:2px -2px 2px #000;
+    text-align: center;
+    width:800px;
+    border: 5px aquamarine solid;
+    white-space: pre;
+    margin: 80px auto 80px auto;
+    /*padding:10px 0 10px;*/
+    color:turquoise;
+    font-size: 1.5em;
+    font-style:italic;
+    line-height:3;
+    background-color: rgba(70,255,255,0.2);
+}
+p.one{
+    border-radius: 20px 20px;
+    text-shadow:2px -2px 2px #000;
+    text-align: center;
+    width:800px;
+    border: 5px aquamarine solid;
+    white-space: pre;
+    margin: 80px auto 80px auto;
+    padding:10px 0 10px;
+    color:turquoise;
+    font-size: 2em;
+    font-style:italic;
+    line-height:3;
+    background-color: rgba(70,255,255,0.2);
+}
+p.content{
+    background-color: turquoise;
+    text-align: center;
+    font-size: 40px;
+    color:black;
+    margin:0 0 0 0;
+}
+h2{
+
+}
+body{
+    /*background-color: turquoise;*/
+}
+img.name{
+    /*float:left;*/
+    background-color:blue;
+    /*width:150px;*/
+    border:2px solid turquoise;
+    border-radius: 100px;
+    /*padding:20px 20px;*/
+    margin:0 400px;
+}
+nav{
+    margin: 20px 0 20px 0;
+    width:800px;
+    font-size:20px;
+    background-color:darkcyan;
+}
+li.li{
+    margin: 0 50px 0 0;
+    float:left;
+}
+img.game{
+    border-radius: 10px;
+    float: left;
+    margin: 0 0 0 0;
+}

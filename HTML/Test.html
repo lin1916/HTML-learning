@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Test 1</title>
+
+    <script type="text/javascript" charset="UTF-8" src="./three.js"></script>
+    <script type="test/javascript" charset="UTF-8" src="./dat.gui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="./SceneUtils.js"></script>
+
+
+    <link rel="stylesheet" href="./default.css">
+</head>
+
+<body>
+<div id="webgl-output"></div>
+    <script type="text/javascript">
+        (function(){
+            //verticle, up down, r,l, box, random gen, range -10,10;color random,pointcloud,init size 3, transparent, opacity0.3 0.5
+            var scene  =  new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0xffffff);
+
+
+            var geometry = new THREE.Geometry();
+            var material = new THREE.PointsMaterial({
+                color: 0xffffff,
+                vertexColors:true,
+                size: 3,
+                transparent: true,
+                opacity: 0.3,
+            });
+            for (var x = -500;x <  500; x++){
+                    var particle = new THREE.Vector3(Math.random()*20 -10, Math.random() * 20 - 10, Math.random() * 20 -10);
+                    geometry.vertices.push(particle);
+                    geometry.colors.push(new THREE.Color(Math.random() * 0xffffff));
+            }
+            var cloud = new THREE.Points(geometry, material);
+            scene.add(cloud);
+            // var cubeGeometry = new THREE.BoxGeometry(5, 5, 5);
+            // var cubeMaterial = new THREE.MeshBasicMaterial({color:0xffff00});
+            // var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+            // scene.add(cube);
+
+            camera.position.set(-30, 40, 30);
+            camera.lookAt(scene.position);
+
+            document.getElementById('webgl-output').appendChild(renderer.domElement);
+
+            renderer.render(scene, camera);
+
+        })();
+    </script>
+</body>
+
+</html>
